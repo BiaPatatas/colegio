@@ -27,7 +27,7 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a class="nav-link" href="#about">SOBRE NÓS</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#projects">ATIVIDADES</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#projects">OFERTA EDUCATIVA</a></li>
                         <li class="nav-item"><a class="nav-link" href="#signup">CONTACTOS</a></li>
                     </ul>
                 </div>
@@ -98,15 +98,56 @@
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-lg-8">
-                        <h2 class="text-white mb-4">Built with Bootstrap 5</h2>
-                        <p class="text-white-50">
-                            Grayscale is a free Bootstrap theme created by Start Bootstrap. It can be yours right now, simply download the template on
-                            <a href="https://startbootstrap.com/theme/grayscale/">the preview page.</a>
-                            The theme is open source, and you can use it for any purpose, personal or commercial.
-                        </p>
+                        <h2 class="text-white mb-4">Oferta Educativa</h2>
+                       
                     </div>
                 </div>
-                <img class="img-fluid" src="assets/img/ipad.png" alt="..." />
+                <div class="carousel-container">
+                    <div class="inner-carousel">
+                      <div class="track">
+                        <div class="card-container">
+                          <div class="card card1"></div>
+                        </div>
+                        <div class="card-container">
+                          <div class="card card2"></div>
+                        </div>
+                        <div class="card-container">
+                          <div class="card card3"></div>
+                        </div>
+                        <div class="card-container">
+                          <div class="card card4"></div>
+                        </div>
+                        <div class="card-container">
+                          <div class="card card5"></div>
+                        </div>
+                        <div class="card-container">
+                          <div class="card card6"></div>
+                        </div>
+                        <div class="card-container">
+                          <div class="card card7"></div>
+                        </div>
+                        <div class="card-container">
+                          <div class="card card8"></div>
+                        </div>
+                        <div class="card-container">
+                          <div class="card card9"></div>
+                        </div>
+                        <div class="card-container">
+                          <div class="card card10"></div>
+                        </div>
+                        <div class="card-container">
+                          <div class="card card11"></div>
+                        </div>
+                        <div class="card-container">
+                          <div class="card card12"></div>
+                        </div>
+                      </div>
+                      <div class="nav">
+                        <button class="prev"><i class="fas fa-arrow-left fa-2x"></i></button>
+                        <button class="next"><i class="fas fa-arrow-right fa-2x"></i></button>
+                      </div>
+                    </div>
+                  </div>
             </div>
         </section>
       
@@ -164,5 +205,33 @@
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        <script>
+            const prev = document.querySelector(".prev");
+            const next = document.querySelector(".next");
+            const carousel = document.querySelector(".carousel-container");
+            const track = document.querySelector(".track");
+            let width = carousel.offsetWidth;
+            let index = 0;
+            window.addEventListener("resize", function () {
+            width = carousel.offsetWidth;
+            });
+            next.addEventListener("click", function (e) {
+            e.preventDefault();
+            index = index + 1;
+            prev.classList.add("show");
+            track.style.transform = "translateX(" + index * -width + "px)";
+            if (track.offsetWidth - index * width < index * width) {
+                next.classList.add("hide");
+            }
+            });
+            prev.addEventListener("click", function () {
+            index = index - 1;
+            next.classList.remove("hide");
+            if (index === 0) {
+                prev.classList.remove("show");
+            }
+            track.style.transform = "translateX(" + index * -width + "px)";
+            });
+            </script>
     </body>
 </html>
