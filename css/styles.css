@@ -11446,7 +11446,7 @@ body {
   
     padding-top: 5rem;
     /* background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.5) 75%, #FFFFFF 100%), url(../assets/img/fundocon.png); */
-    padding: 10rem 0;
+  
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.5) 75%, #FFFFFF 100%), url(../assets/img/fundocon.png);
     background-position: center;
     background-repeat: no-repeat;
